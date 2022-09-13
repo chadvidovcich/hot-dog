@@ -1,9 +1,9 @@
 
 # Hot Dog
 
-Hot Dog is an app built with your pet's best interest in mind. Using data from several external APIs, the app provides a dashboard to help you decide if it is too hot for your pet to be outside. 
+Hot Dog is an app built with your pet's best interest in mind.
 
-Users can also log in with their Google account to access a database of locations that are pet friendly. Looking for a rest stop with a grassy area nearby? Or a dog park with lots of trees for shade?
+Users can log in with their Google account to access and contribute to a database of locations that are pet friendly. Looking for a rest stop with a grassy area nearby? Or a dog park with lots of trees for shade?
 
 ## Screenshots
 ![App Screenshot](https://placedog.net/250?r)
