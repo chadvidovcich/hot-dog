@@ -13,12 +13,14 @@ Please enjoy this doggo until project screenshots are completed.
 
 ## Tech Stack
 
-Node.js, MongoDB, Express.js, Passport.js
+Node.js, MongoDB, Express.js, Passport.js, GCP
 ## Usage
 
 View the live deployment here:
 
-[Hot Dog App Live Deployment](#)
+(Currently not available)
+
+<!-- [Hot Dog App Live Deployment](#)  -->
 
 
 ## Run Locally
@@ -26,6 +28,7 @@ View the live deployment here:
 **Requirements before starting:**
 
   - [MongoDB Atlas URI](https://www.mongodb.com/atlas/database)
+  - [Google Maps API Key](https://developers.google.com/maps)
 
 Clone the project to your local environment
 
@@ -57,6 +60,7 @@ Add the following entries to the environment variable file (.env)
 ```bash
   PORT = 2121
   MONGO_URI = MONGODB-PLACEHOLDER-URI
+  GOOGLE_MAPS_API = GOOGLE-MAPS-PLACEHOLDER-URI
 ```
 
 Start the server in production mode
