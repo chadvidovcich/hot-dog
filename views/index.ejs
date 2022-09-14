@@ -1,10 +1,30 @@
 <%- include('partials/header') -%>
 
+
 <main class="container">
     <div class="row justify-content-around mt-5">
         <a href="/login" class="col-3 btn btn-primary"> Login</a>
         <a href="/signup" class="col-3 btn btn-primary"> Signup</a>
     </div>
+    <div class="row justify-content-around mt-5">
+        <div id="googleMap"></div>
+    </div>
 </main>
+
+<!-- Google Maps Api -->
+<script src="https://maps.googleapis.com/maps/api/js?key=<%=apikey%>&callback=initMap"></script>
+
+<script>
+    function initialize() {
+      var mapProp = {
+        center:new google.maps.LatLng(39.5299,-119.8143),
+        zoom:9,
+        mapTypeId:google.maps.MapTypeId.ROADMAP
+      };
+      var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
 
 <%- include('partials/footer') -%>
