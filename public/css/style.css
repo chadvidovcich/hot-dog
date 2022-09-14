@@ -18,3 +18,16 @@
     color: var(--main-color);
     text-decoration: none;
   }
+
+  #googleMap {
+    width:60vw;
+    height:50vw;
+  }
+  
+
+  @media screen and (max-width: 800px) {
+    #googleMap {
+      width:80vw;
+      height:50vh;
+    }
+  }
