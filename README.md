@@ -3,7 +3,7 @@
 
 Hot Dog is an app built with your pet's best interest in mind.
 
-Users can log in with their Google account to access and contribute to a database of locations that are pet friendly. Looking for a rest stop with a grassy area nearby? Or a dog park with lots of trees for shade?
+Users can log in to access and contribute to a database of locations that are pet friendly. Looking for a rest stop with a grassy area nearby? Or a dog park with lots of trees for shade?
 
 ## Screenshots
 ![App Screenshot](https://placedog.net/250?r)
@@ -13,7 +13,8 @@ Please enjoy this doggo until project screenshots are completed.
 
 ## Tech Stack
 
-Node.js, MongoDB, Express.js, Passport.js, GCP
+Node.js, MongoDB, Express.js, Passport.js, Tailwind CSS
+
 ## Usage
 
 View the live deployment here:
@@ -28,7 +29,8 @@ View the live deployment here:
 **Requirements before starting:**
 
   - [MongoDB Atlas URI](https://www.mongodb.com/atlas/database)
-  - [Google Maps API Key](https://developers.google.com/maps)
+  - [Cloudinary API Key](https://cloudinary.com)
+  <!-- - [Google Maps API Key](https://developers.google.com/maps) -->
 
 Clone the project to your local environment
 
@@ -59,8 +61,11 @@ Add the following entries to the environment variable file (.env)
 
 ```bash
   PORT = 2121
-  MONGO_URI = MONGODB-PLACEHOLDER-URI
-  GOOGLE_MAPS_API = GOOGLE-MAPS-PLACEHOLDER-URI
+  MONGO_URI = MONGODB-URI-PLACEHOLDER
+  # GOOGLE_MAPS_API = GOOGLE-MAPS-API-PLACEHOLDER
+  CLOUD_NAME = CLOUD-NAME-PLACEHOLDER
+  API_KEY = API-KEY-PLACEHOLDER
+  API_SECRET = API-SECRET-PLACEHOLDER
 ```
 
 Start the server in production mode
@@ -81,8 +86,8 @@ Start the server in production mode
 
 
 ## Roadmap
-- Create MVP
-- Create user dashboard
+- Complete visual design across all pages
+- Integrate google maps API
 - Integrate Open UV Index API
 - Integrate Open Weather Map API
 - Integrate Google Maps API
