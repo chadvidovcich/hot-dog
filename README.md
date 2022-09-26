@@ -6,9 +6,7 @@ Hot Dog is an app built with your pet's best interest in mind.
 Users can log in to access and contribute to a database of locations that are pet friendly. Looking for a rest stop with a grassy area nearby? Or a dog park with lots of trees for shade?
 
 ## Screenshots
-![App Screenshot](https://placedog.net/250?r)
-
-Please enjoy this doggo until project screenshots are completed.
+<img src="./public/imgs/readMe.png" width="400">
 
 
 ## Tech Stack
@@ -19,9 +17,7 @@ Node.js, MongoDB, Express.js, Passport.js, Tailwind CSS
 
 View the live deployment here:
 
-(Currently not available)
-
-<!-- [Hot Dog App Live Deployment](#)  -->
+[Hot Dog App Live Deployment](https://hot-dog-jruy.onrender.com/) 
 
 
 ## Run Locally
@@ -61,8 +57,9 @@ Add the following entries to the environment variable file (.env)
 
 ```bash
   PORT = 2121
+  # MongoDB
   MONGO_URI = MONGODB-URI-PLACEHOLDER
-  # GOOGLE_MAPS_API = GOOGLE-MAPS-API-PLACEHOLDER
+  # Cloudinary
   CLOUD_NAME = CLOUD-NAME-PLACEHOLDER
   API_KEY = API-KEY-PLACEHOLDER
   API_SECRET = API-SECRET-PLACEHOLDER
