@@ -10,49 +10,51 @@
       <a href="/feed" class="font-bold hover:underline"><p class="text-gray-600 pt-2">Go to feed</p></a>
     </div>
     <div class="container">
-      <div class="row justify-content-center mt-5">
+      <div class="justify-center mt-5">
         <div>
           <img class="w-4/5 lg:w-3/5 py-2 overflow-y-hidden mx-auto" src="<%= post.image%>" />
           <h4 class="font-bold text-xl">Description:</h4>
           <p><%= post.description %></p>
-          <div class="row justify-content-between">
-            <h3 class="col-3">Likes: <%= post.likes %></h3>
-            <form class="col-1" action="/post/likePost/<%= post.id %>?_method=PUT" method="POST" >
-              <button class="fa fa-heart" type="submit"></button>
+          <div class="flex flex-row justify-start mt-4">
+            <form class="" action="/post/likePost/<%= post.id %>?_method=PUT" method="POST" >
+              <button class="fa fa-heart text-2xl text-red-700 hover:animate-pulse" type="submit"></button>
             </form>
+            <h3 class="ml-4">Likes: <%= post.likes %></h3>
             <%if(post.user == user.id){ %>
+            </div>
             <form action="/post/deletePost/<%= post.id %>?_method=DELETE" method="POST" class="col-3" >
-              <button class="fa fa-trash" type="submit"></button>
+              <button class="fa fa-trash text-2xl hover:animate-pulse" type="submit"></button>
+              <span class="ml-4">Delete Post</span>
             </form>
             <%}%>
-          </div>
         </div>
     
         <!-- Comments -->
         <div class="col-md-6 my-4">
-          <h5>Comments:</h5>
-          <div class="card-group flex-column">
+          <h5 class="font-bold text-xl">Comments:</h5>
+          <div class="flex-column">
             <% comments.forEach(comment=> { %>
-              <div class="card my-2 p-3">
-                <h6 class="card-subtitle text-muted">
+              <div class="card my-2 p-3 border-solid border-2">
+                <h6 class="font-bold">
                   <%= comment.userName %> says:
                 </h6>
                 <p class="card-text mx-3">
                   <%= comment.comment %>
                 </p>
                 <%if(comment.user == user.id){ %>
-                <form action="/comment/deleteComment/<%= comment._id %>?_method=DELETE" method="POST" >
-                    <button class="fa fa-trash" type="submit"></button>
+                <form action="/comment/deleteComment/<%= comment._id %>?_method=DELETE" method="POST" class="flex flex-row justify-end">
+                    <button class="fa fa-trash text-sm hover:animate-pulse" type="submit"></button>
+                    <span class="ml-4 text-sm">Delete Comment</span>
                 </form>
                 <%}%>
               </div>
               <% }) %>
-                <div class="card my-2 p-3">
+                <div class="card my-2">
                   <h5 class="card-title">Add a Comment:</h5>
                   <form class="flex flex-col" action="/comment/createComment/<%= post.id %>" method="POST">
                     <div class="mb-6 pt-3 rounded bg-gray-200">
                         <label for="comment" class="block text-gray-700 text-sm font-bold mb-2 ml-3">Comment:</label>
-                        <input type="text" id="comment" name="comment" required class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" id="title" name="title">
+                        <input type="text" id="comment" name="comment" required class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-red-600 transition duration-500 pb-3" id="title" name="title">
                     </div>
                     <button type="submit" class="bg-red-600 hover:bg-yellow-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200" value="Upload">Submit</button>
                   </form>
