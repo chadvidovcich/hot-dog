@@ -1,16 +1,16 @@
 <!--Nav-->
-<nav class="navbarbutton border-gray-200 py-2.5 rounded">
+<nav class="navbarbutton rounded">
   <div class="container flex flex-wrap items-center mx-auto">
     <button
       data-collapse-toggle="navbar-default"
       id="navbarbutton"
       type="button"
-      class="inline-flex items-center text-md text-red-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+      class="inline-flex items-center text-md text-red-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
       aria-controls="navbar-default"
       aria-expanded="false">
       <span class="sr-only">Open main menu</span>
       <svg
-        class="w-6 h-6"
+        class="w-12 h-12"
         aria-hidden="true"
         fill="currentColor"
         viewBox="0 0 20 20"
@@ -25,28 +25,28 @@
 </nav>
 <div
   id="navbarmenu"
-  class="hidden w-full md:block bg-white lg:max-w-4xl max-w-lg mx-auto p-0 md:p-0 my-0 rounded-lg shadow-2xl"
+  class="inline-block hidden w-full lg:block lg:max-w-4xl max-w-lg p-0 m-0 rounded-lg text-right leading-3 text-gray-700 text-sm"
   id="navbar-default">
   <ul
-    class="flex flex-col border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
+    class="text-gray-700 flex flex-col items-end rounded-lg md:space-x-8 mt-0 md:text-sm md:font-medium md:border-0">
     <li>
       <a
         href="/feed"
-        class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-        >Latest Community</a
+        class="block p-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+        >Latest Community Posts</a
       >
     </li>
     <li>
       <a
         href="/profile"
-        class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-        >Add/Edit Posts</a
+        class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+        >Add/Edit My Posts</a
       >
     </li>
     <li>
       <a
         href="/logout"
-        class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+        class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
         >Log Out</a
       >
     </li>
