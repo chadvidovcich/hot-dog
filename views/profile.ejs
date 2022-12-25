@@ -3,12 +3,9 @@
 <body class="body-bg min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0" style="font-family:'Lato',sans-serif;">
 
 <main class="bg-white lg:max-w-4xl max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
-  <section>
-      <h3 class="font-bold text-2xl">Welcome, <%= user.userName %></h3>
-      <div class="flex flex-col ml-4">
-        <a href="/feed" class="font-bold hover:underline"><p class="text-gray-600 pt-2">Go to feed</p></a>
-        <a href="/logout" class="font-bold hover:underline"><p class="text-gray-600 pt-2">Logout</p></a>
-      </div>
+  <section class="flex justify-between flex-row">
+      <h3 class="font-bold text-2xl w-1/2">Welcome, <%= user.userName %></h3>
+      <%- include('partials/navbar') -%>
   </section>
 
   <section class="mt-10">
