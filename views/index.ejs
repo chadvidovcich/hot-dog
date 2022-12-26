@@ -1,32 +1,50 @@
 <%- include('partials/header') -%>
-    
-        <!--Main-->
-        <div class="container pt-2 md:pt-8 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-            
-            <!--Left Col-->
-            <div class="flex flex-col w-full xl:w-2/5 justify-center xl:items-start overflow-y-hidden">
-                <h1 class="my-4 text-3xl md:text-5xl text-red-500 font-bold leading-tight text-center xl:text-left slide-in-bottom-h1">Find great places to take your dog</h1>
-                <p class="leading-normal text-base md:text-2xl mb-8 text-center xl:text-left slide-in-bottom-subtitle">Join today to see where other users are taking their furry friends!</p>
-            
-                <div class="flex flex-col w-full justify-center text-center md:text-lg">
-                    <p class="text-white font-bold pb-2 xl:pb-4 text-center fade-in">Get Started</p>
-                    <div class="flex w-full justify-center pb-10 xl:pb-0 fade-in">
-                        <form action="/login">
-                            <input type="submit" value="Log In" class="mx-8 px-4 bg-red-600 hover:bg-yellow-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200 bounce-top-icons" />
-                        </form>
-                        <form action="/signUp">
-                            <input type="submit" value="Sign Up" class="mx-8 px-4 bg-red-600 hover:bg-yellow-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200 bounce-top-icons" />
-                        </form>
-                    </div>
-                </div>
-    
-            </div>
-            
-            <!--Right Col-->
-            <div class="w-4/5 lg:w-3/5 py-2 overflow-y-hidden mx-auto">
-                <img class="w-5/6 mx-auto slide-in-bottom rounded" src="/imgs/landingImage.jpeg">
-            </div>
- 
-        </div>
 
-        <%- include('partials/footer') -%>
+<body
+  class="body-bg min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0"
+  style="font-family: 'Lato', sans-serif">
+  <!--Main-->
+  <div
+    class="container pt-2 md:pt-8 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+    <!--Left Col-->
+    <div
+      class="flex flex-col w-full xl:w-2/5 justify-center xl:items-start overflow-y-hidden">
+      <h1
+        class="my-4 text-3xl md:text-5xl text-red-500 font-bold leading-tight text-center xl:text-left slide-in-bottom-h1">
+        Find great places to take your dog
+      </h1>
+      <p
+        class="leading-normal text-base md:text-2xl mb-8 text-center xl:text-left slide-in-bottom-subtitle">
+        Join today to see where other users are taking their furry friends!
+      </p>
+
+      <div class="flex flex-col w-full justify-center text-center md:text-lg">
+        <p class="text-white font-bold pb-2 xl:pb-4 text-center fade-in">
+          Get Started
+        </p>
+        <div class="flex w-full justify-center pb-10 xl:pb-0 fade-in">
+          <form action="/login">
+            <input
+              type="submit"
+              value="Log In"
+              class="mx-8 px-4 bg-red-600 hover:bg-yellow-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200 bounce-top-icons" />
+          </form>
+          <form action="/signUp">
+            <input
+              type="submit"
+              value="Sign Up"
+              class="mx-8 px-4 bg-red-600 hover:bg-yellow-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200 bounce-top-icons" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--Right Col-->
+    <div class="w-4/5 lg:w-3/5 py-2 overflow-y-hidden mx-auto">
+      <img
+        class="w-5/6 mx-auto slide-in-bottom rounded"
+        src="/imgs/landingImage.jpeg" />
+    </div>
+  </div>
+</body>
+<%- include('partials/footer') -%>
