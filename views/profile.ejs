@@ -8,26 +8,36 @@
         <%- include('partials/navbar') -%>
     </section>
 
+<!-- Add New Post -->
     <section class="mt-10">
       <h3 class="font-bold text-xl">Add a post</h3>
       <form class="flex flex-col" action="/post/createPost" enctype="multipart/form-data" method="POST">
         <div class="mb-6 pt-3 rounded bg-gray-200">
-            <label for="title" class="block text-gray-700 text-sm font-bold mb-2 ml-3">Location Title</label>
-            <input type="text" required class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" id="title" name="title">
+          <label for="title" class="block text-gray-700 text-sm font-bold mb-2 ml-3">Location Title</label>
+          <input type="text" id="title" name="title" required class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3">
         </div>
         <div class="mb-6 pt-3 rounded bg-gray-200">
           <label for="description" class="block text-gray-700 text-sm font-bold mb-2 ml-3">Description of Location</label>
-          <textarea required class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" id="description" name="description"></textarea>
+          <textarea id="description" name="description" required class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3"></textarea>
         </div>
         <div class="mb-6 pt-3 rounded bg-gray-200">
-          <label for="imageUpload" class="block text-gray-700 text-sm font-bold mb-2 ml-3">Upload Image (.jpg/.jpeg/.png allowed)</label>
-          <input type="file" id="imageUpload" name="imageUpload" required class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" >
+          <label for="imgUpload" class="block text-gray-700 text-sm font-bold mb-2 ml-3">Upload Image (.jpg/.jpeg/.png allowed)</label>
+          <input type="file" id="imgUpload" name="file" required class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" >
         </div>
-        <button type="submit" class="bg-red-600 hover:bg-yellow-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200" value="Upload">Submit</button>
+        <div class="mb-6 pt-3 rounded bg-gray-200">
+          <label for="coordinatesLat" class="block text-gray-700 text-sm font-bold mb-2 ml-3">Coordinates: Latitude</label>
+          <textarea id="coordinatesLat" name="coordinatesLat" class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3"></textarea>
+        </div>
+        <div class="mb-6 pt-3 rounded bg-gray-200">
+          <label for="coordinatesLong" class="block text-gray-700 text-sm font-bold mb-2 ml-3">Coordinates: Longitude</label>
+          <textarea id="coordinatesLong" name="coordinatesLong" class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3"></textarea>
+        </div>
+        <button type="submit" value="Upload" class="bg-red-600 hover:bg-yellow-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200">Submit</button>
       </form>
     </section>
   </main>
 
+  <!-- My Posts -->
   <section class="bg-white lg:max-w-4xl max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
     <h3 class="font-bold text-2xl">My posts</h3>
     <div class="">
