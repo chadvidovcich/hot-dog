@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const PostSchema = new mongoose.Schema({
   title: {
@@ -17,16 +17,11 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  location: {
-    type: {
-      type: String,
-      enum: ['Point'],
-      required: false
-    },
-    coordinates: {
-      type: [Number],
-      required: false
-    }
+  coordinates: {
+    // { lat: -25.344, lng: 131.031 }
+    type: [Number, Number],
+    index: '2d',
+    required: false,
   },
   likes: {
     type: Number,
@@ -34,7 +29,7 @@ const PostSchema = new mongoose.Schema({
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
+    ref: 'User',
   },
   createdAt: {
     type: Date,
@@ -42,4 +37,4 @@ const PostSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Post", PostSchema);
+module.exports = mongoose.model('Post', PostSchema);
