@@ -1,4 +1,3 @@
-
 # Hot Dog
 
 Hot Dog is an app built with your pet's best interest in mind.
@@ -6,8 +5,8 @@ Hot Dog is an app built with your pet's best interest in mind.
 Users can log in to access and contribute to a database of locations that are pet friendly. Looking for a rest stop with a grassy area nearby? Or a dog park with lots of trees for shade?
 
 ## Screenshots
-<img src="./public/imgs/readMe.png" width="400">
 
+<img src="./public/imgs/readMe.png" width="400">
 
 ## Tech Stack
 
@@ -17,16 +16,15 @@ Node.js, MongoDB, Express.js, Passport.js, Tailwind CSS
 
 View the live deployment here:
 
-[Hot Dog App Live Deployment](https://hot-dog-jruy.onrender.com/) 
-
+[Hot Dog App Live Deployment](https://hot-dog-jruy.onrender.com/)
 
 ## Run Locally
 
 **Requirements before starting:**
 
-  - [MongoDB Atlas URI](https://www.mongodb.com/atlas/database)
-  - [Cloudinary API Key](https://cloudinary.com)
-  <!-- - [Google Maps API Key](https://developers.google.com/maps) -->
+- [MongoDB Atlas URI](https://www.mongodb.com/atlas/database)
+- [Cloudinary API Key](https://cloudinary.com)
+<!-- - [Google Maps API Key](https://developers.google.com/maps) -->
 
 Clone the project to your local environment
 
@@ -71,18 +69,16 @@ Start the server in production mode
   npm run start
 ```
 
-
 ## Authors
 
 - [@ChadVidovcich](https://www.github.com/chadvidovcich)
-
 
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-
 ## Roadmap
+
 - Complete visual design across all pages
 - Integrate google maps API
 - Integrate Open UV Index API

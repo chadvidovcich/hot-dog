@@ -4,16 +4,16 @@
 
   <main class="bg-white lg:max-w-4xl max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
     <section class="flex justify-between flex-row">
-        <h2 class="font-bold text-2xl w-4/5">Hi <%= user.userName %>! 👋</h2>
-        <%- include('partials/navbar') -%>
+      <h2 class="font-bold text-2xl w-4/5">Hi <%= user.userName %>! 👋</h2>
+      <%- include('partials/navbar') -%>
     </section>
 
     <section class="mt-10">
       <h3 class="font-bold text-xl">Add a post</h3>
       <form class="flex flex-col" action="/post/createPost" enctype="multipart/form-data" method="POST">
         <div class="mb-6 pt-3 rounded bg-gray-200">
-            <label for="title" class="block text-gray-700 text-sm font-bold mb-2 ml-3">Location Title</label>
-            <input type="text" required class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" id="title" name="title">
+          <label for="title" class="block text-gray-700 text-sm font-bold mb-2 ml-3">Location Title</label>
+          <input type="text" required class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" id="title" name="title">
         </div>
         <div class="mb-6 pt-3 rounded bg-gray-200">
           <label for="description" class="block text-gray-700 text-sm font-bold mb-2 ml-3">Description of Location</label>
@@ -21,7 +21,7 @@
         </div>
         <div class="mb-6 pt-3 rounded bg-gray-200">
           <label for="imageUpload" class="block text-gray-700 text-sm font-bold mb-2 ml-3">Upload Image (.jpg/.jpeg/.png allowed)</label>
-          <input type="file" id="imageUpload" name="file" required class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" >
+          <input type="file" id="imageUpload" name="file" required class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3">
         </div>
         <button type="submit" class="bg-red-600 hover:bg-yellow-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200" value="Upload">Submit</button>
       </form>
@@ -35,17 +35,17 @@
         <li class="mt-6">
           <% for(var i=0; i<posts.length; i++) {%>
           <a class="flex justify-start hover:scale-105 bg-gray-100 hover:bg-gray-200" href="/post/<%= posts[i]._id%>">
-              <img class="object-scale-down h-60 w-60 p-4 my-auto" src="<%= posts[i].image%>" alt="User submitted image of <%= posts[i].title%>">
-              <% if(posts[i].title.length > 60){ %>
-                <p class="ml-1 p-6 my-auto">  <%= posts[i].title.substring(0,60) + "..." %></p>
-              <% } else{ %>
-                <p class="ml-1 p-6 my-auto">  <%= posts[i].title %></p>
-              <% } %>
-            </a>
+            <img class="object-scale-down h-60 w-60 p-4 my-auto" src="<%= posts[i].image%>" alt="User submitted image of <%= posts[i].title%>">
+            <% if(posts[i].title.length > 60){ %>
+            <p class="ml-1 p-6 my-auto"> <%= posts[i].title.substring(0,60) + "..." %></p>
+            <% } else{ %>
+            <p class="ml-1 p-6 my-auto"> <%= posts[i].title %></p>
             <% } %>
-          </li>
-        </ul>
-      </div>  
+          </a>
+          <% } %>
+        </li>
+      </ul>
+    </div>
   </section>
 </body>
 

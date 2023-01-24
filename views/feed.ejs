@@ -2,30 +2,30 @@
 
 <body class="body-bg min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0" style="font-family:'Lato',sans-serif;">
 
-<main class="bg-white lg:max-w-4xl max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
-  <section class="flex justify-between flex-row">
-    <h2 class="font-bold text-2xl w-4/5">Community Feed 🏘️</h2>
-    <%- include('partials/navbar') -%>
-  </section>
-  <section>
-    <div>
-      <ul>
-      <% for(var i=0; i<posts.length; i++) { %>
-        <li class="mt-6">
-          <a class="flex justify-start hover:scale-105 bg-gray-100 hover:bg-gray-200" href="/post/<%= posts[i]._id%>">
-            <img class="object-scale-down overflow-hidden h-36 w-36 md:h-48 md:w-48 p-4 my-auto" src="<%= posts[i].image%>" alt="User submitted image of <%= posts[i].title%>">
-            <% if(posts[i].title.length > 60){ %>
-              <p class="ml-1 p-6 my-auto">  <%= posts[i].title.substring(0,60) + "..." %></p>
-            <% } else{ %>
-              <p class="ml-1 p-6 my-auto">  <%= posts[i].title %></p>
-            <% } %>
-          </a>
-        </li>
-      <% } %>
-      </ul>
-    </div>  
-  </section>
-</main>
+  <main class="bg-white lg:max-w-4xl max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
+    <section class="flex justify-between flex-row">
+      <h2 class="font-bold text-2xl w-4/5">Community Feed 🏘️</h2>
+      <%- include('partials/navbar') -%>
+    </section>
+    <section>
+      <div>
+        <ul>
+          <% for(var i=0; i<posts.length; i++) { %>
+          <li class="mt-6">
+            <a class="flex justify-start hover:scale-105 bg-gray-100 hover:bg-gray-200" href="/post/<%= posts[i]._id%>">
+              <img class="object-scale-down overflow-hidden h-36 w-36 md:h-48 md:w-48 p-4 my-auto" src="<%= posts[i].image%>" alt="User submitted image of <%= posts[i].title%>">
+              <% if(posts[i].title.length > 60){ %>
+              <p class="ml-1 p-6 my-auto"> <%= posts[i].title.substring(0,60) + "..." %></p>
+              <% } else{ %>
+              <p class="ml-1 p-6 my-auto"> <%= posts[i].title %></p>
+              <% } %>
+            </a>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    </section>
+  </main>
 </body>
 
 <%- include('partials/footer') -%>

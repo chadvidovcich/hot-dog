@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const LocationSchema = new mongoose.Schema({
   title: {
@@ -9,20 +9,21 @@ const LocationSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  location: { //GeoJSON 
+  location: {
+    //GeoJSON
     type: {
       type: String,
       enum: ['Point'],
-      required: true
+      required: true,
     },
     coordinates: {
       type: [Number],
-      required: true
-    }
+      required: true,
+    },
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
+    ref: 'User',
   },
   createdAt: {
     type: Date,
@@ -30,4 +31,4 @@ const LocationSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Location", LocationSchema);
+module.exports = mongoose.model('Location', LocationSchema);

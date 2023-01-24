@@ -1,10 +1,7 @@
 <%- include('partials/header') -%>
 
-<body
-  class="body-bg min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0"
-  style="font-family: 'Lato', sans-serif">
-  <main
-    class="bg-white lg:max-w-4xl max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
+<body class="body-bg min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0" style="font-family: 'Lato', sans-serif">
+  <main class="bg-white lg:max-w-4xl max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
     <section class="flex justify-between flex-row">
       <h2 class="font-bold text-2xl w-3/5"><%= post.title %></h2>
       <%- include('partials/navbar') -%>
@@ -12,19 +9,13 @@
     <div class="container">
       <div class="justify-center mt-5">
         <div>
-          <img
-            class="w-4/5 lg:w-3/5 py-2 overflow-y-hidden mx-auto"
-            src="<%= post.image%>"
-            alt="User submitted image of <%= post.title%>" />
+          <img class="w-4/5 lg:w-3/5 py-2 overflow-y-hidden mx-auto" src="<%= post.image%>" alt="User submitted image of <%= post.title%>" />
           <h3 class="font-bold text-xl">Description:</h3>
           <p><%= post.description %></p>
           <!-- Likes and Delete Section -->
           <div class="flex flex-row justify-around my-4">
             <!-- Likes Post Section -->
-            <form
-              class="flex items-center mx-4 px-4 bg-red-600 hover:animate-pulse text-white font-bold py-2 rounded shadow-lg hover:shadow-xl"
-              action="/post/likePost/<%= post.id %>?_method=PUT"
-              method="POST">
+            <form class="flex items-center mx-4 px-4 bg-red-600 hover:animate-pulse text-white font-bold py-2 rounded shadow-lg hover:shadow-xl" action="/post/likePost/<%= post.id %>?_method=PUT" method="POST">
               <button type="submit" title="Like Post" class="flex items-center">
                 <i class="fa fa-heart text-2xl text-red-800"> </i>
                 <span class="ml-4">Likes: <%= post.likes %></span>
@@ -32,14 +23,8 @@
             </form>
             <!-- Delete Post Section -->
             <%if(post.user == user.id){ %>
-            <form
-              action="/post/deletePost/<%= post.id %>?_method=DELETE"
-              method="POST"
-              class="flex items-center mx-4 px-4 bg-gray-600 hover:animate-pulse text-white font-bold py-2 rounded shadow-lg hover:shadow-xl">
-              <button
-                type="submit"
-                title="Delete Post"
-                class="flex items-center">
+            <form action="/post/deletePost/<%= post.id %>?_method=DELETE" method="POST" class="flex items-center mx-4 px-4 bg-gray-600 hover:animate-pulse text-white font-bold py-2 rounded shadow-lg hover:shadow-xl">
+              <button type="submit" title="Delete Post" class="flex items-center">
                 <i class="fa fa-trash text-2xl text-gray-300"> </i>
                 <span class="ml-4">Delete Post</span>
               </button>
@@ -57,14 +42,8 @@
               <h5 class="font-bold"><%= comment.userName %> says:</h5>
               <p class="card-text mx-3"><%= comment.comment %></p>
               <%if(comment.user == user.id){ %>
-              <form
-                action="/comment/deleteComment/<%= comment._id %>?_method=DELETE"
-                method="POST"
-                class="flex flex-row justify-end">
-                <button
-                  type="submit"
-                  title="Delete Comment"
-                  class="flex items-center text-sm mx-1 px-2 bg-gray-600 hover:animate-pulse text-white font-bold py-1 rounded shadow-lg hover:shadow-xl">
+              <form action="/comment/deleteComment/<%= comment._id %>?_method=DELETE" method="POST" class="flex flex-row justify-end">
+                <button type="submit" title="Delete Comment" class="flex items-center text-sm mx-1 px-2 bg-gray-600 hover:animate-pulse text-white font-bold py-1 rounded shadow-lg hover:shadow-xl">
                   <i class="fa fa-trash text-gray-300"> </i>
                   <span class="ml-2">Delete Comment</span>
                 </button>
@@ -72,39 +51,22 @@
               <%}%>
             </div>
             <% }) %>
-            <div class="card my-2">
-              <h4 class="card-title">Add a Comment:</h4>
-              <form
-                class="flex flex-col"
-                action="/comment/createComment/<%= post.id %>"
-                method="POST">
-                <div class="mb-6 pt-3 rounded bg-gray-200">
-                  <label
-                    for="comment"
-                    class="block text-gray-700 text-sm font-bold mb-2 ml-3"
-                    >Comment:</label
-                  >
-                  <input
-                    type="text"
-                    id="comment"
-                    name="comment"
-                    required
-                    class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-red-600 transition duration-500 pb-3"
-                    id="title"
-                    name="title" />
-                </div>
-                <button
-                  type="submit"
-                  class="bg-red-600 hover:bg-yellow-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200"
-                  value="Upload">
-                  Submit
-                </button>
-              </form>
+              <div class="card my-2">
+                <h4 class="card-title">Add a Comment:</h4>
+                <form class="flex flex-col" action="/comment/createComment/<%= post.id %>" method="POST">
+                  <div class="mb-6 pt-3 rounded bg-gray-200">
+                    <label for="comment" class="block text-gray-700 text-sm font-bold mb-2 ml-3">Comment:</label>
+                    <input type="text" id="comment" name="comment" required class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-red-600 transition duration-500 pb-3" id="title" name="title" />
+                  </div>
+                  <button type="submit" class="bg-red-600 hover:bg-yellow-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200" value="Upload">
+                    Submit
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
   </main>
 
   <%- include('partials/footer') -%>
