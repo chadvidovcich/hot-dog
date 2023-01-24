@@ -1,0 +1,28 @@
+<script src="http://maps.googleapis.com/maps/api/js">
+</script>
+
+<script>
+  function initialize() {
+    const location = {
+      lat: <%= post.coordinates[0] %>,
+      lng: <%= post.coordinates[1] %>,
+    }
+
+    const mapProp = {
+      center: location,
+      zoom: 14,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    const map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+    const marker = new google.maps.Marker({
+      position: location,
+      map: map
+    })
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<div id="googleMap" class="w-4/5 h-80 mx-auto"></div>
