@@ -79,8 +79,5 @@ Start the server in production mode
 
 ## Roadmap
 
-- Complete visual design across all pages
-- Integrate google maps API
 - Integrate Open UV Index API
 - Integrate Open Weather Map API
-- Integrate Google Maps API
