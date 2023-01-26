@@ -42,10 +42,7 @@ module.exports = {
       const result = await cloudinary.uploader.upload(req.file.path);
 
       // Format coordinates
-      const coords = [
-        Number.parseInt(req.body.coordinatesLat),
-        Number.parseInt(req.body.coordinatesLong),
-      ];
+      const coords = [req.body.coordinatesLat, req.body.coordinatesLong];
 
       await Post.create({
         title: req.body.title,

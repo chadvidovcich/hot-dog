@@ -17,16 +17,11 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  location: {
-    type: {
-      type: String,
-      enum: ['Point'],
-      required: false,
-    },
-    coordinates: {
-      type: [Number],
-      required: false,
-    },
+  coordinates: {
+    // { lat: -25.344, lng: 131.031 }
+    type: [Number, Number],
+    index: '2d',
+    required: false,
   },
   likes: {
     type: Number,

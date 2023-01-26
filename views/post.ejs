@@ -12,6 +12,7 @@
           <img class="w-4/5 lg:w-3/5 py-2 overflow-y-hidden mx-auto" src="<%= post.image%>" alt="User submitted image of <%= post.title%>" />
           <h3 class="font-bold text-xl">Description:</h3>
           <p><%= post.description %></p>
+
           <!-- Likes and Delete Section -->
           <div class="flex flex-row justify-around my-4">
             <!-- Likes Post Section -->
@@ -67,6 +68,9 @@
           </div>
         </div>
       </div>
+      <%if(post.coordinates){ %>
+      <%- include('partials/map') -%>
+      <%}%>
   </main>
 
   <%- include('partials/footer') -%>
