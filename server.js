@@ -15,7 +15,7 @@ const postRoutes = require('./routes/posts');
 const commentRoutes = require('./routes/comments');
 
 //Use .env file in config folder
-require('dotenv').config({ path: './config/.env' });
+require('dotenv').config({ path: '.env' });
 
 // Passport config
 require('./config/passport')(passport);
@@ -41,14 +41,14 @@ app.use(methodOverride('_method'));
 
 // Setup Sessions - stored in MongoDB
 app.use(
-  session({
-    secret: 'hot dog app',
-    resave: false,
-    saveUninitialized: false,
-    store: MongoStore.create({
-      mongoUrl: process.env.MONGO_URI,
-    }),
-  })
+	session({
+		secret: 'hot dog app',
+		resave: false,
+		saveUninitialized: false,
+		store: MongoStore.create({
+			mongoUrl: process.env.MONGO_URI,
+		}),
+	})
 );
 
 // Passport middleware
@@ -65,5 +65,5 @@ app.use('/comment', commentRoutes);
 
 //Server Running
 app.listen(process.env.PORT, () => {
-  console.log(`Server is running on port ${process.env.PORT}`);
+	console.log(`Server is running on port ${process.env.PORT}`);
 });
