@@ -10,15 +10,15 @@ const logger = require('morgan');
 const connectDB = require('./config/database.js');
 
 //Import routes
-const mainRoutes = require('./routes/main');
-const postRoutes = require('./routes/posts');
-const commentRoutes = require('./routes/comments');
+const mainRoutes = require('./routes/main.js');
+const postRoutes = require('./routes/posts.js');
+const commentRoutes = require('./routes/comments.js');
 
 //Use .env file in config folder
 require('dotenv').config({ path: '.env' });
 
 // Passport config
-require('./config/passport')(passport);
+require('./config/passport.js')(passport);
 
 //Connect To Database
 connectDB();
