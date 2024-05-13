@@ -8,15 +8,6 @@
 		"start": "node server.js",
 		"dev": "nodemon server.js"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/chadvidovcich/hot-dog.git"
-	},
-	"author": "",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/chadvidovcich/hot-dog/issues"
-	},
 	"dependencies": {
 		"bcrypt": "^5.0.1",
 		"cloudinary": "^1.32.0",
