@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  hot-dog:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    expose:
+      - "2121"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:2121/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
