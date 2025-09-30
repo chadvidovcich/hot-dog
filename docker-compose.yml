@@ -1,11 +1,7 @@
-version: "3.8"
-
 services:
   hot-dog:
     build: .
     restart: unless-stopped
-    env_file:
-      - .env
     expose:
       - "2121"
     healthcheck:
