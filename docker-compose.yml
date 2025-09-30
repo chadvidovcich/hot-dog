@@ -2,8 +2,8 @@ services:
   hot-dog:
     build: .
     restart: unless-stopped
-    expose:
-      - "2121"
+    ports:
+      - 2121:2121
     env_file:
       - stack.env
     healthcheck:
