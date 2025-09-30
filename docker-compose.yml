@@ -4,6 +4,8 @@ services:
     restart: unless-stopped
     expose:
       - "2121"
+    env_file:
+      - stack.env
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:2121/"]
       interval: 30s
