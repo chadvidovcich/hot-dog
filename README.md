@@ -16,7 +16,7 @@ Node.js, MongoDB, Express.js, Passport.js, Tailwind CSS
 
 View the live deployment here:
 
-[Hot Dog App Live Deployment](https://hot-dog-jruy.onrender.com/)
+[Hot Dog App Live Deployment](https://conways-game.chadvidovcich.com/)
 
 ## Run Locally
 
