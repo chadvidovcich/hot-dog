@@ -1,5 +1,6 @@
 services:
   hot-dog:
+    container_name: project-hot-dog-app
     build:
       context: .
       dockerfile: Dockerfile
