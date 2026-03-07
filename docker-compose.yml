@@ -11,10 +11,10 @@ services:
     # env_file:
       # - stack.env
     environment:
-      API_KEY=${API_KEY}
-      API_SECRET=${API_SECRET}
-      CLOUD_NAME=${CLOUD_NAME}
-      MONGO_URI=${MONGO_URI}
+      - API_KEY=${API_KEY}
+      - API_SECRET=${API_SECRET}
+      - CLOUD_NAME=${CLOUD_NAME}
+      - MONGO_URI=${MONGO_URI}
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:2121/"]
       interval: 30s
