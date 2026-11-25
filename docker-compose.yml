@@ -1,23 +1,24 @@
 services:
   hot-dog:
-    container_name: project-hot-dog-app
+    container_name: portfolio-hot-dog-app
     build:
       context: .
       dockerfile: Dockerfile
     image: project-hot-dog-app:latest
     pull_policy: never
     restart: unless-stopped
-    ports:
-      - 2121:2121
-    # env_file:
-      # - stack.env
     environment:
       - API_KEY=${API_KEY}
       - API_SECRET=${API_SECRET}
       - CLOUD_NAME=${CLOUD_NAME}
       - MONGO_URI=${MONGO_URI}
+    networks: [tunnel]
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:2121/"]
       interval: 30s
       timeout: 5s
       retries: 3
+
+networks:
+  tunnel:
+    external: true
